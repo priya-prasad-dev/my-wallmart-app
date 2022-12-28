@@ -1,12 +1,18 @@
 import { Route, Routes } from "react-router-dom";
+import CustomerPurchase from "./components/customer/customer-purchase.component";
+import CustomerRequest from "./components/customer/customer-request.component";
+import FetchCusProduct from "./components/customer/fetch-custproduct.component";
 import MiniDrawer from "./components/drawer/drawer-header.component"
 import HeaderApp from "./components/header/header-app.component"
 import SellerApprove from "./components/supplier/approve-walllmart.component";
 import SupplierCreate from "./components/supplier/create_product.component";
+import FetchSupProduct from "./components/supplier/fetch-product.component";
 import View from "./components/view/view-prod-sale.component";
 import WallmartRequest from "./components/wallmart/create-request-page.component";
-import Display from "./components/wallmart/get-allProduct.component";
+import FetchWalProduct from "./components/wallmart/fetch-walproduct.component";
+import Display from "./components/admin/get-allProduct.component";
 import WallmartPurchase from "./components/wallmart/purchase-bywallmart.component";
+import WallmartApprove from "./components/wallmart/wallmart-response.component";
 
 function App() {
 
@@ -21,7 +27,12 @@ function App() {
         <Route path="/purwal" element={<WallmartPurchase />} />
         <Route path="/get" element={< Display/>} />
         <Route path="/view" element={<View />} />
-        {/* <Route path="/turi" element={<TokenUri />} /> */}
+        <Route path="/fetchsp" element={<FetchSupProduct />} />
+        <Route path="/fetchwp" element={<FetchWalProduct />} />
+        <Route path="/fetchcp" element={<FetchCusProduct/>} />
+        <Route path="/cusr" element={< CustomerRequest/>} />
+        <Route path="/wala" element={< WallmartApprove/>} />
+        <Route path="/purc" element={< CustomerPurchase/>} />
         {/* <Route path="/isapp" element={<MarketPlace />} /> */}
         {/* <Route path="/app" element={<Purchase />} /> */}
         {/* <Route path="/approval" element={<Approval />} />  */}
